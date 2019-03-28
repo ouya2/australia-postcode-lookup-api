@@ -17,7 +17,8 @@ It uses in-memory database (H2) to preload the Australia postcodes, suburbs and 
 
 This application is packaged as a jar which has Tomcat 8 embedded. 
 
-You run it using the ```java -jar postcode-lookup-service-1.0.0-SNAPSHOT.jar``` command.
+You run it using the ```java -jar postcode-lookup-service-1.0.0-SNAPSHOT.jar``` command as long as
+JVM is installed and configured in the system PATH.
 
 * Clone this repository 
 * Make sure you are using JDK 1.8 and Maven 3.x

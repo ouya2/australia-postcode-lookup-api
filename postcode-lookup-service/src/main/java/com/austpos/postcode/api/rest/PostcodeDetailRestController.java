@@ -46,7 +46,7 @@ public class PostcodeDetailRestController extends BaseRestController {
                    .limit(1)
                    .collect(Collectors.toList());
     checkResourceAlreadyExist(CollectionUtils.isEmpty(results) ? null : results.get(0));
-    return postcodeDetailService.createPostcodeDetail(new PostCodeDetail(postcode, suburb, "AU"));
+    return postcodeDetailService.createPostcodeDetail(new PostCodeDetail(postcode, suburb.toUpperCase(), "AU"));
   }
 
   @RequestMapping(value = "/suburb/{name}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)

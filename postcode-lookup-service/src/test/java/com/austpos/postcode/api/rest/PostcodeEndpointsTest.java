@@ -31,7 +31,7 @@ public class PostcodeEndpointsTest extends EndpointTest {
   @Before
   public void setup(){
     super.setup();
-    detail = new PostCodeDetail(9877, "Somewhere", "AU");
+    detail = new PostCodeDetail(9877, "Somewhere".toUpperCase(), "AU");
     postcodeDetailService.createPostcodeDetail(detail);
   }
 
@@ -65,7 +65,7 @@ public class PostcodeEndpointsTest extends EndpointTest {
         .andReturn();
 
     String content = result.getResponse().getContentAsString();
-    assertTrue(content.contains("Somewhere"));
+    assertTrue(content.contains("SOMEWHERE"));
   }
 
   @Test
@@ -89,7 +89,7 @@ public class PostcodeEndpointsTest extends EndpointTest {
         .andExpect(status().isCreated())
         .andExpect(jsonPath("$.id").isNumber())
         .andExpect(jsonPath("$.postcode").value(4560))
-        .andExpect(jsonPath("$.suburb").value("Random"));
+        .andExpect(jsonPath("$.suburb").value("RANDOM"));
   }
 
   @Test

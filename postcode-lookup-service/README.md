@@ -37,9 +37,13 @@ http://localhost:8081/metrics
 ### Create a new postcode resource
 
 ```
-POST /api/postcode-detail?postcode=8777&suburb=myplace
+POST http://localhost:8080/api/postcode-detail?postcode=8777&suburb=myplace
 
 ```
+
+### Retrieve Postcode from a suburb
+
+GET http://localhost:8080/api/postcode-detail/suburb/
 
 ### To view Swagger 2 API docs
 
@@ -48,3 +52,14 @@ Run the server and browse to http://localhost:8080/swagger-ui.html
 ### To view your H2 in-memory datbase
 
 To view and query the database you can browse to http://localhost:8080/h2-console. JDBC URL: jdbc:h2:mem:customercrud with default username is 'sa' with a blank password.
+
+### Further Improvement
+
+* Handle the identical suburb with different postcode in different states.
+* Security
+
+### Technology Used
+
+* Springboot
+* Java 8
+* Apache Commons

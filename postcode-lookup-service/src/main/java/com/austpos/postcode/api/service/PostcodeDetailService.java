@@ -26,7 +26,7 @@ public class PostcodeDetailService {
 
   public PostCodeDetail getPostcodeDetailBySuburb(String suburb){
     LOGGER.info("Getting postcode details for suburb - " + suburb);
-    return repository.findPostCodeDetailsBySuburb(suburb);
+    return repository.findPostCodeDetailsBySuburb(suburb.toUpperCase());
   }
 
   public List<PostCodeDetail> getPostCodeDetailsByPostcode(Integer postcode) {

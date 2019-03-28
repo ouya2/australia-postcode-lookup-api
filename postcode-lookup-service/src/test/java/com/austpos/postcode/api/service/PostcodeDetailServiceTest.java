@@ -44,11 +44,11 @@ public class PostcodeDetailServiceTest {
 
   @Test
   public void testGetPostcodeDetail() {
-    when(repo.findPostCodeDetailsBySuburb("Kew")).thenReturn(
+    when(repo.findPostCodeDetailsBySuburb("KEW")).thenReturn(
         new PostCodeDetail(3453L, 7894, "Kew", "Vic"));
 
     PostCodeDetail detail = service.getPostcodeDetailBySuburb("Kew");
-    verify(repo, times(1)).findPostCodeDetailsBySuburb("Kew");
+    verify(repo, times(1)).findPostCodeDetailsBySuburb("KEW");
 
     assertEquals(Integer.valueOf(7894), detail.getPostcode());
     assertEquals("Vic", detail.getState());

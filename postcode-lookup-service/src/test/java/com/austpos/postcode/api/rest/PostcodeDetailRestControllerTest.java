@@ -28,7 +28,7 @@ public class PostcodeDetailRestControllerTest {
 
   @Test
   public void testCreatePostcodeWithSuburb(){
-    PostCodeDetail detail = new PostCodeDetail(3456, "Sunny", "AU");
+    PostCodeDetail detail = new PostCodeDetail(3456, "SUNNY", "AU");
     when(postcodeDetailService.getPostCodeDetailsByPostcode(3456)).thenReturn(Collections.emptyList());
     when(postcodeDetailService.createPostcodeDetail(detail)).thenReturn(detail);
 

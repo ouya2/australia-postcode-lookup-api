@@ -43,7 +43,14 @@ POST http://localhost:8080/api/postcode-detail?postcode=8777&suburb=myplace
 
 ### Retrieve Postcode from a suburb
 
-GET http://localhost:8080/api/postcode-detail/suburb/
+```
+GET http://localhost:8080/api/postcode-detail/suburb/malvern east
+```
+
+### Retrieve suburbs from a postcode
+```
+http://localhost:8080/api/postcode-detail/postcode/3144
+```
 
 ### To view Swagger 2 API docs
 
